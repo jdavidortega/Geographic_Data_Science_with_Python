@@ -4,3 +4,5 @@ folium
 matplotlib
 rioxarray
 osmnx
+seaborn
+pysal
