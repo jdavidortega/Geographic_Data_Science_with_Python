@@ -6,3 +6,5 @@ rioxarray
 osmnx
 seaborn
 pysal
+scikit-learn
+seaborn
