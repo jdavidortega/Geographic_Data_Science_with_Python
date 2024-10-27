@@ -8,3 +8,4 @@ seaborn
 pysal
 scikit-learn
 seaborn
+graphviz
