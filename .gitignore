@@ -3,3 +3,5 @@
 cache/
 *.dot
 *.pkl
+*.tif
+!data/cuerpos_agua.tif
