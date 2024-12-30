@@ -5,3 +5,4 @@ cache/
 *.pkl
 *.tif
 !data/cuerpos_agua.tif
+*.aux.xml
