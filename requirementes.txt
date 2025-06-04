@@ -7,4 +7,8 @@ osmnx
 seaborn
 pysal
 scikit-learn
-seaborn
+boto3
+glob2
+arm_pyart
+rasterio
+cartopy
