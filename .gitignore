@@ -8,3 +8,4 @@ cache/
 *.aux.xml
 data/S2*
 data/LC08*
+establecimientos_de_indus.geojson
