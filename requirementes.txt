@@ -14,3 +14,4 @@ rasterio
 cartopy
 SQLAlchemy
 psycopg2-binary
+contextily
