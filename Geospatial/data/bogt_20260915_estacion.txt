@@ -1,0 +1,4 @@
+BOGT (IGS, NASA/JPL GGN) - coordenadas geocentricas publicadas en el encabezado RINEX (m)
+X 1744399.0397
+Y -6116037.5577
+Z 512731.7532
