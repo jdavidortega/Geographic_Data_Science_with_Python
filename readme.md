@@ -20,15 +20,15 @@ requirementes.txt            Dependencias de Python
 
 ## Presentaciones
 
-Cada presentación es un único archivo HTML con estilos, simulaciones y figuras incluidos. Se abre con cualquier navegador, sin servidor ni instalación, y funciona sin conexión (solo los enlaces a las fuentes requieren internet). Junto a cada HTML hay un ZIP con el mismo archivo comprimido para descargarlo.
+Cada presentación es un único archivo HTML con estilos, simulaciones y figuras incluidos. Se abre con cualquier navegador, sin servidor ni instalación, y funciona sin conexión (solo los enlaces a las fuentes requieren internet).
 
-Para usarla, descarga el HTML (o el ZIP y descomprímelo) y ábrelo con doble clic. Por defecto se abre en modo láminas: se avanza con las flechas del teclado o los botones de la barra inferior, el botón **Índice** lleva a cualquier lámina y **Modo lectura** muestra todo el contenido en una sola página.
+Para usarla, descarga el HTML y ábrelo con doble clic. Por defecto se abre en modo láminas: se avanza con las flechas del teclado o los botones de la barra inferior, el botón **Índice** lleva a cualquier lámina y **Modo lectura** muestra todo el contenido en una sola página.
 
-| Materia | Presentación | Descarga |
+| Materia | Presentación | Archivo |
 |---|---|---|
-| Geoposicionamiento | SAR abierto: del eco al desplazamiento (Sentinel-1, InSAR) | [HTML](Geoposicionamiento/presentaciones/insar_sentinel1.html) · [ZIP](Geoposicionamiento/presentaciones/insar_sentinel1.zip) |
+| Geoposicionamiento | SAR abierto: del eco al desplazamiento (Sentinel-1, InSAR) | [HTML](Geoposicionamiento/presentaciones/insar_sentinel1.html) |
 
-Al agregar una presentación nueva: guárdala en la carpeta `presentaciones/` de su materia, genera el ZIP con el mismo nombre (`zip -9 nombre.zip nombre.html`) y añade una fila a esta tabla. Los botones de descarga dentro del HTML deben apuntar a esos archivos con rutas relativas (`href="nombre.zip"`), nunca a rutas absolutas como `/descargas/...`.
+Al agregar una presentación nueva: guárdala en la carpeta `presentaciones/` de su materia y añade una fila a esta tabla. Si el HTML tiene un botón de descarga, debe apuntar al propio archivo con una ruta relativa (`href="nombre.html"`), nunca a rutas absolutas como `/descargas/...`.
 
 ## Notebooks
 
