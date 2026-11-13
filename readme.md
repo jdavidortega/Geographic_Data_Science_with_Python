@@ -1,43 +1,74 @@
 # Geographic Data Science with Python
 
-Este proyecto es una colección de notebooks desarrollados para apoyar cursos introductorios en ciencia de datos geoespaciales y percepción remota (*remote sensing*). Está diseñado para estudiantes y profesionales que buscan familiarizarse con conceptos estadísticos, fundamentos de inteligencia artificial y estructuras de datos geográficos, con un enfoque práctico usando Python.
+Material de clase de José Ortega para dos materias: **Geoposicionamiento** y **Percepción remota**. Incluye notebooks prácticos en Python y presentaciones interactivas en HTML que reemplazan progresivamente las diapositivas de PowerPoint. La carpeta `ML/` reúne contenidos de aprendizaje automático que se usan en ambas materias.
 
-## Contenido de los notebooks
+## Estructura
 
+```
+Geoposicionamiento/          Materia: GNSS y análisis espacial
+  *.ipynb                    Notebooks
+  data/                      Datos de los notebooks de esta materia
+  presentaciones/            Presentaciones interactivas (HTML)
+Percepcion_remota/           Materia: imágenes satelitales y radar
+  *.ipynb                    Notebooks
+  radar_meteorologico/       Radares meteorológicos del IDEAM
+  presentaciones/            Presentaciones interactivas (HTML)
+ML/                          Aprendizaje automático (transversal)
+data/                        Datos compartidos (Landsat 8, Sentinel-2, rásteres)
+requirementes.txt            Dependencias de Python
+```
 
+## Presentaciones
 
-### 1. `conceptos_estadisticos.ipynb`
-Explora conceptos fundamentales de estadística necesarios para el análisis de datos:
-- Teorema central del límite  
-- Selección aleatoria de datos  
-- Ley de los grandes números  
+Cada presentación es un único archivo HTML con estilos, simulaciones y figuras incluidos. Se abre con cualquier navegador, sin servidor ni instalación, y funciona sin conexión (solo los enlaces a las fuentes requieren internet). Junto a cada HTML hay un ZIP con el mismo archivo comprimido para descargarlo.
 
-### 2. `ai_fundamentals.ipynb`
-Introduce los principios básicos de inteligencia artificial aplicada:
-- Análisis exploratorio de datos (estadística descriptiva y correlación)  
-- Algoritmos supervisados:  
-  - Árboles de decisión  
-  - Máquina de soporte vectorial (SVM)  
-- Algoritmos no supervisados:  
-  - K-means  
-  - DBSCAN  
+Para usarla, descarga el HTML (o el ZIP y descomprímelo) y ábrelo con doble clic. Por defecto se abre en modo láminas: se avanza con las flechas del teclado o los botones de la barra inferior, el botón **Índice** lleva a cualquier lámina y **Modo lectura** muestra todo el contenido en una sola página.
 
-### 3. `geospatial_data_types.ipynb`
-Describe los tipos de estructuras de datos geoespaciales:
-- Geotablas (tablas con geometría espacial)  
-- Superficies (datos continuos como elevación o temperatura)  
-- Grafos espaciales  
+| Materia | Presentación | Descarga |
+|---|---|---|
+| Geoposicionamiento | SAR abierto: del eco al desplazamiento (Sentinel-1, InSAR) | [HTML](Geoposicionamiento/presentaciones/insar_sentinel1.html) · [ZIP](Geoposicionamiento/presentaciones/insar_sentinel1.zip) |
 
-### 4. `geospatial_contiguity.ipynb`
-Aborda la construcción de relaciones espaciales entre entidades geográficas:
-- Pesos de contigüidad (vecindad espacial basada en límites comunes)  
-- Pesos basados en distancia (proximidad entre objetos espaciales)  
+Al agregar una presentación nueva: guárdala en la carpeta `presentaciones/` de su materia, genera el ZIP con el mismo nombre (`zip -9 nombre.zip nombre.html`) y añade una fila a esta tabla. Los botones de descarga dentro del HTML deben apuntar a esos archivos con rutas relativas (`href="nombre.zip"`), nunca a rutas absolutas como `/descargas/...`.
 
-### 5. `processing_landsat_and_sentinel_data.ipynb`
-Procesa imágenes satelitales de Landsat 8 y Sentinel-2 para calcular:
-- Reflectancia a nivel del suelo
-- Índices espectrales como:
-  - NDVI (vegetación)
-  - NDWI (agua)
-  - NDBI (áreas urbanas)
-  - SAVI (vegetación con corrección de suelo)
+## Notebooks
+
+### Geoposicionamiento
+
+| Notebook | Contenido |
+|---|---|
+| `gnss_pseudodistancia.ipynb` | De la señal a la pseudodistancia: qué mide un receptor GNSS, con datos RINEX de la estación BOGT. |
+| `gnss_estimacion_posicion.ipynb` | Estimación de la posición: de las pseudodistancias a X, Y, Z y el error del reloj del receptor. |
+| `geospatial_data_types.ipynb` | Tipos de datos geoespaciales: geotablas, superficies y grafos espaciales. |
+| `db.ipynb` | Una base de datos espacial para el curso. |
+| `choropleth_es.ipynb` | Mapas coropléticos: de los puntos a las entidades espaciales, y de la variable al color. |
+| `geospatial_weights.ipynb` | Pesos espaciales: contigüidad y distancia. |
+| `autocorrelacion_espacial.ipynb` | Autocorrelación espacial de hurtos a residencia en barrios y veredas de Medellín. |
+| `point_pattern_analysis.ipynb` | Análisis de patrones de puntos. |
+
+### Percepción remota
+
+| Notebook | Contenido |
+|---|---|
+| `processing_landsat_and_sentinel_data.ipynb` | Landsat 8 y Sentinel-2: reflectancia de superficie e índices espectrales (NDVI, NDWI, NDBI, SAVI). |
+| `radar_meteorologico/get_data.ipynb` | Descarga de datos de los radares meteorológicos del IDEAM desde su repositorio público en AWS S3. |
+| `radar_meteorologico/visualization.ipynb` | Lectura y visualización de reflectividad con Py-ART y exportación a GeoTIFF. |
+
+### Aprendizaje automático (transversal)
+
+| Notebook | Contenido |
+|---|---|
+| `conceptos_estadisticos.ipynb` | Teorema central del límite, muestreo aleatorio y ley de los grandes números. |
+| `EDA.ipynb` | Análisis exploratorio de datos. |
+| `knn_iris.ipynb` | K vecinos más cercanos (KNN): conceptos, matemática e implementación. |
+| `nosupervisado.ipynb` | Aprendizaje no supervisado: K-means y DBSCAN. |
+| `sentinel2_classification.ipynb` | Clasificación de coberturas con imágenes Sentinel-2. |
+
+## Entorno
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirementes.txt
+```
+
+Las imágenes Landsat 8 y Sentinel-2 de `data/` no están en el repositorio por su tamaño (ver `.gitignore`); se descargan de los portales de USGS y Copernicus.
