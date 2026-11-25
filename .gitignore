@@ -9,3 +9,6 @@ cache/
 data/S2*
 data/LC08*
 establecimientos_de_indus.geojson
+# clave de pruebas de GroqCloud (ver Geoposicionamiento/.pruebas.ejemplo)
+.pruebas
+.env

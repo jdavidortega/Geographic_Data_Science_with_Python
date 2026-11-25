@@ -27,6 +27,7 @@ Para usarla, descarga el HTML y ábrelo con doble clic. Por defecto se abre en m
 | Materia | Presentación | Archivo |
 |---|---|---|
 | Geoposicionamiento | SAR abierto: del eco al desplazamiento (Sentinel-1, InSAR) | [HTML](Geoposicionamiento/presentaciones/insar_sentinel1.html) |
+| Geoposicionamiento | Agentes de inteligencia artificial aplicados a la ciencia de datos geoespaciales (curso corto, 4 h) | [HTML](Geoposicionamiento/presentaciones/agentes_ia.html) |
 
 Al agregar una presentación nueva: guárdala en la carpeta `presentaciones/` de su materia y añade una fila a esta tabla. Si el HTML tiene un botón de descarga, debe apuntar al propio archivo con una ruta relativa (`href="nombre.html"`), nunca a rutas absolutas como `/descargas/...`.
 
@@ -44,6 +45,7 @@ Al agregar una presentación nueva: guárdala en la carpeta `presentaciones/` de
 | `geospatial_weights.ipynb` | Pesos espaciales: contigüidad y distancia. |
 | `autocorrelacion_espacial.ipynb` | Autocorrelación espacial de hurtos a residencia en barrios y veredas de Medellín. |
 | `point_pattern_analysis.ipynb` | Análisis de patrones de puntos. |
+| `agentes_geoespaciales.ipynb` | Agentes de IA sobre datos geoespaciales: herramientas con esquema, ciclo acción–observación, evaluación con GroqCloud. Sus trazas y cifras alimentan la presentación `agentes_ia.html` (constructor en `herramientas_agentes/`). |
 
 ### Percepción remota
 

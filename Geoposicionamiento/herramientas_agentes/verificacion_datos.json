@@ -1,0 +1,305 @@
+{
+ "barrios": {
+  "n": 332,
+  "crs": "EPSG:9377",
+  "columnas": [
+   "OBJECTID",
+   "codigo",
+   "nombre",
+   "identificacion",
+   "limitecomunacorregimientoid",
+   "limitemunicipioid",
+   "subtipo_barriovereda",
+   "fecha_actualizacion",
+   "Shape_Length",
+   "Shape_Area",
+   "geometry"
+  ],
+  "geom": [
+   "MultiPolygon",
+   "Polygon"
+  ],
+  "bounds": [
+   4699257.4,
+   2239727.3,
+   4726590.9,
+   2263174.2
+  ],
+  "validas": 332,
+  "ejemplo": [
+   {
+    "OBJECTID": 1,
+    "codigo": "Inst_15",
+    "nombre": "U.P.B",
+    "identificacion": "Inst_15",
+    "limitecomunacorregimientoid": "11",
+    "limitemunicipioid": "001",
+    "subtipo_barriovereda": 1,
+    "fecha_actualizacion": 1418774400000,
+    "Shape_Length": 1872.1105788494795,
+    "Shape_Area": 216519.30081735356
+   },
+   {
+    "OBJECTID": 2,
+    "codigo": "Inst_18",
+    "nombre": "Cerro Nutibara",
+    "identificacion": "Inst_18",
+    "limitecomunacorregimientoid": "16",
+    "limitemunicipioid": "001",
+    "subtipo_barriovereda": 1,
+    "fecha_actualizacion": 1418774400000,
+    "Shape_Length": 2840.275368800091,
+    "Shape_Area": 399158.94669652445
+   },
+   {
+    "OBJECTID": 3,
+    "codigo": "0610",
+    "nombre": "Mirador del Doce",
+    "identificacion": "0610",
+    "limitecomunacorregimientoid": "06",
+    "limitemunicipioid": "001",
+    "subtipo_barriovereda": 1,
+    "fecha_actualizacion": 1418774400000,
+    "Shape_Length": 1336.3474021837908,
+    "Shape_Area": 64822.37885803252
+   }
+  ]
+ },
+ "cruces": {
+  "n": 724,
+  "crs": "EPSG:9377",
+  "columnas": [
+   "OBJECTID",
+   "id_cruce",
+   "id_controlador",
+   "direccion",
+   "ubicacion",
+   "cod_barrio",
+   "link_foto",
+   "cod_smf_cl_cont",
+   "x_origen_nacional",
+   "y_origen_nacional",
+   "geometry"
+  ],
+  "geom": [
+   "Point"
+  ],
+  "bounds": [
+   4710327.5,
+   2241590.3,
+   4718925.0,
+   2255053.5
+  ],
+  "ejemplo": [
+   {
+    "OBJECTID": 1,
+    "id_cruce": 402,
+    "id_controlador": 391,
+    "direccion": "CR 65  CL 20",
+    "ubicacion": null,
+    "cod_barrio": "1504",
+    "link_foto": "secretaria_movilidad/images/cruces/402/imagen.jpg",
+    "cod_smf_cl_cont": "E2",
+    "x_origen_nacional": 4714128.4676,
+    "y_origen_nacional": 2246298.3815
+   },
+   {
+    "OBJECTID": 2,
+    "id_cruce": 403,
+    "id_controlador": 111,
+    "direccion": "CR 65  CL 25",
+    "ubicacion": null,
+    "cod_barrio": "1503",
+    "link_foto": null,
+    "cod_smf_cl_cont": null,
+    "x_origen_nacional": 4714217.3706,
+    "y_origen_nacional": 2246728.5368
+   },
+   {
+    "OBJECTID": 3,
+    "id_cruce": 404,
+    "id_controlador": 75,
+    "direccion": "CR 65  CL 30",
+    "ubicacion": "Cost NORTE",
+    "cod_barrio": "1601",
+    "link_foto": null,
+    "cod_smf_cl_cont": null,
+    "x_origen_nacional": 4714308.0004,
+    "y_origen_nacional": 2247327.8451
+   }
+  ]
+ },
+ "conteo": {
+  "columna_nombre": "nombre",
+  "asignados": 723,
+  "fuera": 1,
+  "duplicados_en_join": 0,
+  "top10": {
+   "La Candelaria": 45,
+   "Perpetuo Socorro": 25,
+   "Boston": 20,
+   "San Benito": 18,
+   "Villa Nueva": 18,
+   "Barrio Colón": 17,
+   "Belén": 15,
+   "Guayaquil": 15,
+   "Prado": 13,
+   "Bomboná No.1": 13
+  },
+  "barrios_con_cruces": 148,
+  "barrios_sin_cruces": 184
+ },
+ "cercania": {
+  "OBJECTID": {
+   "r300": 15,
+   "r500": 48,
+   "r1000": 136,
+   "barrio": "La Candelaria",
+   "xy": [
+    4716522.0,
+    2249000.9
+   ]
+  },
+  "id_cruce": {
+   "r300": 17,
+   "r500": 42,
+   "r1000": 132,
+   "barrio": "La Candelaria",
+   "xy": [
+    4716419.9,
+    2248795.6
+   ]
+  },
+  "id_controlador": {
+   "r300": 5,
+   "r500": 10,
+   "r1000": 29,
+   "barrio": "Lorena",
+   "xy": [
+    4712308.5,
+    2249339.3
+   ]
+  }
+ },
+ "hurtos": {
+  "n": 42673,
+  "columnas": [
+   "fecha_hecho",
+   "cantidad",
+   "latitud",
+   "longitud",
+   "sexo",
+   "edad",
+   "estado_civil",
+   "grupo_actor",
+   "actividad_delictiva",
+   "parentesco",
+   "ocupacion",
+   "discapacidad",
+   "grupo_especial",
+   "medio_transporte",
+   "nivel_academico",
+   "testigo",
+   "conducta",
+   "modalidad",
+   "caracterizacion",
+   "conducta_especial",
+   "arma_medio",
+   "articulo_penal",
+   "categoria_penal",
+   "nombre_barrio",
+   "codigo_barrio",
+   "codigo_comuna",
+   "lugar",
+   "sede_receptora",
+   "bien",
+   "categoria_bien",
+   "grupo_bien",
+   "modelo",
+   "color",
+   "permiso",
+   "unidad_medida",
+   "fecha_ingestion",
+   "fecha"
+  ],
+  "sin_lat": 4330,
+  "sin_lon": 4330,
+  "lat_min_max": [
+   5.605,
+   6.37716325
+  ],
+  "lon_min_max": [
+   -75.70922655,
+   -0.000679
+  ],
+  "fecha_min": "2003-01-01 02:30:00-05:00",
+  "fecha_max": "2023-11-30 23:30:00-05:00",
+  "fecha_nula": 0,
+  "cantidad_valores": {
+   "1.0": 42673
+  },
+  "por_anio": {
+   "2003": 2224,
+   "2004": 1586,
+   "2005": 1244,
+   "2006": 1178,
+   "2007": 574,
+   "2008": 1276,
+   "2009": 730,
+   "2010": 422,
+   "2011": 245,
+   "2012": 666,
+   "2013": 1189,
+   "2014": 1374,
+   "2015": 2450,
+   "2016": 2224,
+   "2017": 3895,
+   "2018": 4752,
+   "2019": 4588,
+   "2020": 4116,
+   "2021": 3677,
+   "2022": 2760,
+   "2023": 1503
+  },
+  "conducta": {
+   "Hurto a residencia": 42673
+  },
+  "duplicados_exactos": 5559,
+  "modalidad_top": {
+   "Rompimiento cerraduta": 13012,
+   "Descuido": 12356,
+   "Atraco": 3684,
+   "Llave maestra": 2858,
+   "Sin dato": 2588
+  },
+  "nombre_barrio_top": {
+   "Laureles": 917,
+   "Los Conquistadores": 693,
+   "El Poblado": 632,
+   "Los Colores": 604,
+   "Belén": 592
+  },
+  "lat_fuera_medellin": 5,
+  "asignados_barrio": 38308,
+  "top10_barrio_total": {
+   "Laureles": 700,
+   "Los Conquistadores": 653,
+   "Rosales": 541,
+   "Los Colores": 525,
+   "Belén": 491,
+   "San Bernardo": 490,
+   "La Castellana": 479,
+   "Boston": 471,
+   "San Antonio de Prado": 471,
+   "La Florida": 467
+  },
+  "top5_2023": {},
+  "n_2023": 0,
+  "top5_2024": {},
+  "n_2024": 0,
+  "top5_2025": {},
+  "n_2025": 0,
+  "r300_cruce125": 117,
+  "r500_cruce125": 489
+ }
+}

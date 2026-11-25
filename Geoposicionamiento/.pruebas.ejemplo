@@ -1,0 +1,5 @@
+# Clave de GroqCloud para el cuaderno agentes_geoespaciales.ipynb (solo pruebas).
+# 1. Copiar este archivo como `.pruebas` en esta misma carpeta (Geoposicionamiento/).
+# 2. Crear una clave en https://console.groq.com/keys, preferiblemente con fecha de vencimiento, y pegarla abajo.
+# 3. `.pruebas` está en .gitignore: nunca se sube al repositorio. Revocar la clave al terminar las pruebas.
+GROQ_API_KEY=gsk_pegar_aqui_la_clave

@@ -1,0 +1,545 @@
+{
+ "agente": {
+  "grafo": {
+   "nodes": [
+    {
+     "id": "__start__",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "__start__"
+     }
+    },
+    {
+     "id": "modelo",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "modelo"
+     }
+    },
+    {
+     "id": "herramientas",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "prebuilt",
+       "tool_node",
+       "ToolNode"
+      ],
+      "name": "herramientas"
+     },
+     "metadata": {
+      "__tools": [
+       "listar_capas",
+       "contar_por_barrio",
+       "cruces_cercanos",
+       "hurtos_por_barrio"
+      ]
+     }
+    },
+    {
+     "id": "__end__"
+    }
+   ],
+   "edges": [
+    {
+     "source": "__start__",
+     "target": "modelo"
+    },
+    {
+     "source": "herramientas",
+     "target": "modelo"
+    },
+    {
+     "source": "modelo",
+     "target": "__end__",
+     "conditional": true
+    },
+    {
+     "source": "modelo",
+     "target": "herramientas",
+     "data": "tools",
+     "conditional": true
+    }
+   ]
+  },
+  "mermaid": "---\nconfig:\n  flowchart:\n    curve: linear\n---\ngraph TD;\n\t__start__([<p>__start__</p>]):::first\n\tmodelo(modelo)\n\therramientas(herramientas<hr/><small><em>__tools = listar_capas, contar_por_barrio, cruces_cercanos, hurtos_por_barrio</em></small>)\n\t__end__([<p>__end__</p>]):::last\n\t__start__ --> modelo;\n\therramientas --> modelo;\n\tmodelo -.-> __end__;\n\tmodelo -. &nbsp;tools&nbsp; .-> herramientas;\n\tclassDef default fill:#f2f0ff,line-height:1.2\n\tclassDef first fill-opacity:0\n\tclassDef last fill:#bfb6fc\n"
+ },
+ "cadena": {
+  "grafo": {
+   "nodes": [
+    {
+     "id": "__start__",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "__start__"
+     }
+    },
+    {
+     "id": "interpretar",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "interpretar"
+     }
+    },
+    {
+     "id": "contar",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "contar"
+     }
+    },
+    {
+     "id": "redactar",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "redactar"
+     }
+    },
+    {
+     "id": "__end__"
+    }
+   ],
+   "edges": [
+    {
+     "source": "__start__",
+     "target": "interpretar"
+    },
+    {
+     "source": "contar",
+     "target": "redactar"
+    },
+    {
+     "source": "interpretar",
+     "target": "contar"
+    },
+    {
+     "source": "redactar",
+     "target": "__end__"
+    }
+   ]
+  },
+  "mermaid": "---\nconfig:\n  flowchart:\n    curve: linear\n---\ngraph TD;\n\t__start__([<p>__start__</p>]):::first\n\tinterpretar(interpretar)\n\tcontar(contar)\n\tredactar(redactar)\n\t__end__([<p>__end__</p>]):::last\n\t__start__ --> interpretar;\n\tcontar --> redactar;\n\tinterpretar --> contar;\n\tredactar --> __end__;\n\tclassDef default fill:#f2f0ff,line-height:1.2\n\tclassDef first fill-opacity:0\n\tclassDef last fill:#bfb6fc\n"
+ },
+ "paralelo": {
+  "grafo": {
+   "nodes": [
+    {
+     "id": "__start__",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "__start__"
+     }
+    },
+    {
+     "id": "corrida_1",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "corrida_1"
+     }
+    },
+    {
+     "id": "corrida_2",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "corrida_2"
+     }
+    },
+    {
+     "id": "corrida_3",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "corrida_3"
+     }
+    },
+    {
+     "id": "votar",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "votar"
+     }
+    },
+    {
+     "id": "__end__"
+    }
+   ],
+   "edges": [
+    {
+     "source": "__start__",
+     "target": "corrida_1"
+    },
+    {
+     "source": "__start__",
+     "target": "corrida_2"
+    },
+    {
+     "source": "__start__",
+     "target": "corrida_3"
+    },
+    {
+     "source": "corrida_1",
+     "target": "votar"
+    },
+    {
+     "source": "corrida_2",
+     "target": "votar"
+    },
+    {
+     "source": "corrida_3",
+     "target": "votar"
+    },
+    {
+     "source": "votar",
+     "target": "__end__"
+    }
+   ]
+  },
+  "mermaid": "---\nconfig:\n  flowchart:\n    curve: linear\n---\ngraph TD;\n\t__start__([<p>__start__</p>]):::first\n\tcorrida_1(corrida_1)\n\tcorrida_2(corrida_2)\n\tcorrida_3(corrida_3)\n\tvotar(votar)\n\t__end__([<p>__end__</p>]):::last\n\t__start__ --> corrida_1;\n\t__start__ --> corrida_2;\n\t__start__ --> corrida_3;\n\tcorrida_1 --> votar;\n\tcorrida_2 --> votar;\n\tcorrida_3 --> votar;\n\tvotar --> __end__;\n\tclassDef default fill:#f2f0ff,line-height:1.2\n\tclassDef first fill-opacity:0\n\tclassDef last fill:#bfb6fc\n"
+ },
+ "evaluador": {
+  "grafo": {
+   "nodes": [
+    {
+     "id": "__start__",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "__start__"
+     }
+    },
+    {
+     "id": "generador",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "generador"
+     }
+    },
+    {
+     "id": "evaluador",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "evaluador"
+     }
+    },
+    {
+     "id": "__end__"
+    }
+   ],
+   "edges": [
+    {
+     "source": "__start__",
+     "target": "generador"
+    },
+    {
+     "source": "evaluador",
+     "target": "__end__",
+     "conditional": true
+    },
+    {
+     "source": "evaluador",
+     "target": "generador",
+     "conditional": true
+    },
+    {
+     "source": "generador",
+     "target": "evaluador"
+    }
+   ]
+  },
+  "mermaid": "---\nconfig:\n  flowchart:\n    curve: linear\n---\ngraph TD;\n\t__start__([<p>__start__</p>]):::first\n\tgenerador(generador)\n\tevaluador(evaluador)\n\t__end__([<p>__end__</p>]):::last\n\t__start__ --> generador;\n\tevaluador -.-> __end__;\n\tevaluador -.-> generador;\n\tgenerador --> evaluador;\n\tclassDef default fill:#f2f0ff,line-height:1.2\n\tclassDef first fill-opacity:0\n\tclassDef last fill:#bfb6fc\n"
+ },
+ "orquestador": {
+  "grafo": {
+   "nodes": [
+    {
+     "id": "__start__",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "__start__"
+     }
+    },
+    {
+     "id": "orquestador",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "orquestador"
+     }
+    },
+    {
+     "id": "trabajador",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "trabajador"
+     }
+    },
+    {
+     "id": "sintetizar",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "sintetizar"
+     }
+    },
+    {
+     "id": "__end__"
+    }
+   ],
+   "edges": [
+    {
+     "source": "__start__",
+     "target": "orquestador"
+    },
+    {
+     "source": "orquestador",
+     "target": "trabajador",
+     "conditional": true
+    },
+    {
+     "source": "trabajador",
+     "target": "sintetizar"
+    },
+    {
+     "source": "sintetizar",
+     "target": "__end__"
+    }
+   ]
+  },
+  "mermaid": "---\nconfig:\n  flowchart:\n    curve: linear\n---\ngraph TD;\n\t__start__([<p>__start__</p>]):::first\n\torquestador(orquestador)\n\ttrabajador(trabajador)\n\tsintetizar(sintetizar)\n\t__end__([<p>__end__</p>]):::last\n\t__start__ --> orquestador;\n\torquestador -.-> trabajador;\n\ttrabajador --> sintetizar;\n\tsintetizar --> __end__;\n\tclassDef default fill:#f2f0ff,line-height:1.2\n\tclassDef first fill-opacity:0\n\tclassDef last fill:#bfb6fc\n"
+ },
+ "ruta": {
+  "grafo": {
+   "nodes": [
+    {
+     "id": "__start__",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "__start__"
+     }
+    },
+    {
+     "id": "clasificar",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "clasificar"
+     }
+    },
+    {
+     "id": "conteo",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "conteo"
+     }
+    },
+    {
+     "id": "cercanos",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "cercanos"
+     }
+    },
+    {
+     "id": "hurtos",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "hurtos"
+     }
+    },
+    {
+     "id": "no_respondible",
+     "type": "runnable",
+     "data": {
+      "id": [
+       "langgraph",
+       "_internal",
+       "_runnable",
+       "RunnableCallable"
+      ],
+      "name": "no_respondible"
+     }
+    },
+    {
+     "id": "__end__"
+    }
+   ],
+   "edges": [
+    {
+     "source": "__start__",
+     "target": "clasificar"
+    },
+    {
+     "source": "clasificar",
+     "target": "cercanos",
+     "conditional": true
+    },
+    {
+     "source": "clasificar",
+     "target": "conteo",
+     "conditional": true
+    },
+    {
+     "source": "clasificar",
+     "target": "hurtos",
+     "conditional": true
+    },
+    {
+     "source": "clasificar",
+     "target": "no_respondible",
+     "conditional": true
+    },
+    {
+     "source": "cercanos",
+     "target": "__end__"
+    },
+    {
+     "source": "conteo",
+     "target": "__end__"
+    },
+    {
+     "source": "hurtos",
+     "target": "__end__"
+    },
+    {
+     "source": "no_respondible",
+     "target": "__end__"
+    }
+   ]
+  },
+  "mermaid": "---\nconfig:\n  flowchart:\n    curve: linear\n---\ngraph TD;\n\t__start__([<p>__start__</p>]):::first\n\tclasificar(clasificar)\n\tconteo(conteo)\n\tcercanos(cercanos)\n\thurtos(hurtos)\n\tno_respondible(no_respondible)\n\t__end__([<p>__end__</p>]):::last\n\t__start__ --> clasificar;\n\tclasificar -.-> cercanos;\n\tclasificar -.-> conteo;\n\tclasificar -.-> hurtos;\n\tclasificar -.-> no_respondible;\n\tcercanos --> __end__;\n\tconteo --> __end__;\n\thurtos --> __end__;\n\tno_respondible --> __end__;\n\tclassDef default fill:#f2f0ff,line-height:1.2\n\tclassDef first fill-opacity:0\n\tclassDef last fill:#bfb6fc\n"
+ }
+}
